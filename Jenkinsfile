@@ -1,11 +1,11 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Checkout Code') {
-            steps {
-                checkout scm
-            }
-        }
+  agent any
+  stages {
+    stage('Git checkout') {
+      steps {
+        git(url: 'https://github.com/hrhouma/jenkins1.git', branch: 'main')
+      }
     }
+
+  }
 }
